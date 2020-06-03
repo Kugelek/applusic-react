@@ -21,27 +21,25 @@ const App = (props) => {
 
 
   return (
-    <div className="App">
-      <h1>testing</h1>
-      < div >
-        {
-          data.entry.map((album, index) => {
-            return <Album
-              name={album['im:name'].label}
-              image={album['im:image'][1].label}
-              count={album['im:itemCount'].label}
-              price={album['im:price'].label}
-              contentType={album['im:contentType']['im:contentType'].attributes.label}
-              title={album.title.label}
-              linkSong={album.link.attributes.href}
-              artist={album['im:artist'].label}
-              linkGenre={album.category.attributes.scheme}
-              releaseDate={album['im:releaseDate'].attributes.label}
-            />
-          })
-        }
-      </div >
-    </div >
+    <section className="App albums">
+      {
+        data.entry.map((album, index) => {
+          return <Album
+            name={album['im:name'].label}
+            image={album['im:image'][2].label}
+            count={album['im:itemCount'].label}
+            price={album['im:price'].label}
+            contentType={album['im:contentType']['im:contentType'].attributes.label}
+            title={album.title.label}
+            linkSong={album.link.attributes.href}
+            artist={album['im:artist'].label}
+            linkGenre={album.category.attributes.scheme}
+            releaseDate={album['im:releaseDate'].attributes.label}
+          />
+        })
+      }
+
+    </section >
   );
 
 }

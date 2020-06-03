@@ -1,0 +1,40 @@
+.albums{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    column-gap: 2rem;
+    width: 80vw;
+    margin: auto;
+    background-color: $color-almost-white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.album{
+
+    display: flex;
+
+    figure{
+        padding: .3rem;
+    }
+    &__description{
+        display: flex;
+        flex-direction: column;
+       
+    }
+
+    margin: 15px auto;
+    border:  1px solid #555;
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+    height: 30rem;
+
+    &__name{
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        padding: 0 1rem;
+        font-weight: 400;
+    }
+  
+}

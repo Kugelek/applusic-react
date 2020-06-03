@@ -9,14 +9,35 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; }
 
-.App {
-  text-align: center;
+body {
   background: radial-gradient(circle, rgba(98, 122, 252, 0.829569) 30%, #9965e4 62%, #e6617c 95%); }
 
+.albums {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  column-gap: 2rem;
+  width: 80vw;
+  margin: auto;
+  background-color: #eee;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+
 .album {
-  width: 60%;
-  margin: 16px auto;
+  display: flex;
+  margin: 15px auto;
   border: 1px solid #555;
-  padding: 16px;
+  padding: 15px;
   text-align: center;
-  background-color: white; }
+  background-color: white;
+  height: 30rem; }
+  .album figure {
+    padding: .3rem; }
+  .album__description {
+    display: flex;
+    flex-direction: column; }
+  .album__name {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    padding: 0 1rem;
+    font-weight: 400; }
