@@ -1,18 +1,63 @@
 .albums{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(55rem, 1fr));
     column-gap: 2rem;
-    width: 80vw;
+    width: 90vw;
     margin: auto;
     background-color: $color-almost-white;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     text-align: center;
 }
 
 .album{
-
+    margin: 12px auto;
+    border:  1px solid #555;
+    padding: 13px;
+    width: 55rem;
+    text-align: center;
+    background-color: white;
+    height: 25rem;
     display: flex;
+    flex-direction: column;
+    transition: all 0.6s ease-in-out;
+    &:hover{
+        height: 30rem;
+    }
+    &:hover &__extended-info{
+        height: 8rem;
+    }
+    &:hover &__extended-info>*{
+        display: block;
+    }
+    &:hover &__extended-info::before{
+        transform: rotate(45deg);
+    }
+
+    
+    &__basic-info{
+        display: flex;
+    }
+    &__extended-info{
+        position: relative;
+        height: 2rem;
+        background-color: orange;
+        transition: all 0.6s ease-in-out;
+        overflow: hidden;
+        &>*{
+            display: none;
+        }
+        &::before{
+            position: absolute;
+            content: '';
+                border: solid black;
+                border-width: 0 3px 3px 0;
+                display: block;
+                padding: 3px;
+                transform: rotate(-45deg);
+              
+        }
+    }
 
     figure{
         padding: .3rem;
@@ -23,12 +68,7 @@
        
     }
 
-    margin: 15px auto;
-    border:  1px solid #555;
-    padding: 15px;
-    text-align: center;
-    background-color: white;
-    height: 30rem;
+  
 
     &__name{
         font-size: 2.5rem;
