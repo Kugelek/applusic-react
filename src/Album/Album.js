@@ -1,5 +1,5 @@
 import React from 'react';
-import './album.css';
+import './../css/style.css';
 const album = (props) => {
     return (
         <div onClick={props.click} className="album">

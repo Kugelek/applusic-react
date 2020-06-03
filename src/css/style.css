@@ -1,0 +1,22 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+.App {
+  text-align: center;
+  background: radial-gradient(circle, rgba(98, 122, 252, 0.829569) 30%, #9965e4 62%, #e6617c 95%); }
+
+.album {
+  width: 60%;
+  margin: 16px auto;
+  border: 1px solid #555;
+  padding: 16px;
+  text-align: center;
+  background-color: white; }
