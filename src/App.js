@@ -1,39 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Album from './Album/Album';
-
-const App = props => {
-
-  const [albumsState, setAlbumsState] = useState({
-    albums: [
-      { id: 'asfas', name: 'test1', author: 'test2' },
-      { id: 'xxxa', name: 'test2', author: 'test2213' },
-      { id: 'ggfd', name: 'test3', author: 'test2213' }
-    ],
-  });
+import axios from 'axios';
 
 
-  let albums = null;
-  albums = (
-    < div >
-      {albumsState.albums.map((album, index) => {
-        return <Album
-          name={album.name}
-          author={album.author}
-          key={album.id}
-        />
-      })}
+const App = (props) => {
 
-    </div >
-  );
+  const [data, setData] = useState({ entry: [] });
+
+  useEffect(async () => {
+    const fetchApi = async () => {
+      const result = await axios(
+        'https://itunes.apple.com/us/rss/topalbums/limit=100/json',
+      );
+      console.log(result.data.feed.entry);
+      setData(result.data.feed);
+    }
+    fetchApi();
+  }, []);
 
 
   return (
     <div className="App">
       <h1>testing</h1>
-      {albums}
+      < div >
+        {
+          data.entry.map((album, index) => {
+            return <Album
+              name={album.rights.label}
+            //  author={album.author}
+            // key={album.id}
+            />
+          })
+        }
+      </div >
     </div >
   );
+
 }
 
 export default App;
