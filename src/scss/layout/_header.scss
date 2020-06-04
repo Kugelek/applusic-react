@@ -8,6 +8,11 @@
     margin: 5rem auto;
     height: 20vh;
     box-shadow: $shadow-minimal;
+    @media only screen and (max-width: $break-medium){
+        //searchbar goes to a new row
+        flex-wrap:wrap;
+        height: 40vh;
+    }
     &__logo{
         display: block;
         z-index: 1;
@@ -47,4 +52,10 @@
     border: 1px solid $color-grey-light;
     margin-left: auto;
     margin-right: 3rem;
+
+    @media only screen and (max-width: $break-medium){
+        //searchbar goes to a new row
+        width: 85vw;
+        margin:auto;
+    }
 }
