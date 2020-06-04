@@ -1,35 +1,46 @@
 .albums{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(55rem, 1fr));
-    column-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(57rem, 1fr));
+
+    column-gap: 0;
+    
     width: 90vw;
+    @media only screen and (max-width: $break-medium){
+        //no more background
+        width: 100vw;
+    }
     margin: auto;
     background-color: $color-almost-white;
     justify-content: center;
     align-items: start;
     text-align: center;
     box-shadow: $shadow-subtle;
+  
 }
 
 .album{
-    margin: 5rem 1rem;
+    margin: 5rem 3rem;
+    
     border:  1px solid $color-grey-light;
-    //padding: 12px;
+
     box-shadow: $shadow-minimal;
     width: 55rem;
     text-align: center;
     background-color: white;
-    height: 25rem;
+    height: 26rem;
     display: flex;
     flex-direction: column;
-    transition: all 0.6s ease-in-out;
+    transition: all 0.65s ease-in-out;
+    @media only screen and (max-width: $break-grid-shrink){
+        width: 80vw;
+    }
     &:hover{
-        height: 27rem;
+        height: 28rem;
         margin-bottom: 1rem;
         padding-bottom: 0;
     }
     &:hover &__extended-info{
-        height: 6rem;
+        height: 7rem;
     }
     &:hover &__extended-info>*{
         display: block;
@@ -125,11 +136,12 @@
     &__cta-btn{
         border-radius: 3px;
         border: 3px solid $color-secondary;
-     
+        width: 15rem;
         
         opacity: 0.85;
         padding: 0.5rem 1rem;
-        background-color: $color-white ;
+        background-color: $color-white;
+        margin: auto;
         transition: all .35s;
         &>a:link,
         &>a:visited{
