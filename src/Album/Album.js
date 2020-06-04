@@ -8,36 +8,36 @@ const album = (props) => {
                     <img className="album__img" src={props.image} alt="Artist logo"></img>
                 </figure>
                 <div className="album__description">
-                    <div className="album__name">
+                    <h2 className="album__name">
                         {props.name}
+                    </h2>
+                    <div className="album__artist">
+                        {props.contentType} by {props.artist}
+                    </div>
+                    <div className="album__release-date">
+                        Release date: {props.releaseDate}
                     </div>
                     <div className="album__count">
-                        {props.count}
+                        Only {props.count} left
                     </div>
                     <div className="album__price">
-                        {props.price}
-                    </div>
-                    <div className="album__type">
-                        {props.contentType}
+                        Buy now for {props.price}
                     </div>
                     <div className="album__rights">
                         {props.rights}
                     </div>
 
-                    <a className="album__link--song" href={props.linkSong}>test</a>
-                    <a className="album__link--genre" href={props.linkGenre}>test</a>
-                    <div className="album__artist">
-                        {props.artist}
-                    </div>
-                    <div className="album__release-date">
-                        {props.releaseDate}
-                    </div>
+
+
                 </div>
             </div>
             <div class="album__extended-info">
                 <div className="album__title">
                     {props.title}
-                </div></div>
+                </div>
+                <a className="album__link--song" href={props.linkSong}>Listen to {props.name} at AppleMusic</a>
+                <a className="album__link--genre" href={props.linkGenre}>Check out more in this genre!</a>
+            </div>
         </div >
     )
 }

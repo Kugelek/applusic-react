@@ -3,6 +3,9 @@
     $color-almost-white: #eee;
     $color-black: #000;
 
+    $color-grey-dark: #A9A9A9;
+    $color-grey-darkest: #696969;
+    $color-grey-light:#C0C0C0;
 //mixins
 
 
@@ -21,6 +24,8 @@ html{
     font-size: 62.5%; //1rem = 10px
 }
 body {
-    background: radial-gradient(circle, rgba(98,122,252,0.8295693277310925) 30%, rgba(153,101,228,1) 62%, rgba(230,97,124,1) 95%);
-  
+    //background: radial-gradient(circle, rgba(98,122,252,0.8295693277310925) 30%, rgba(153,101,228,1) 62%, rgba(230,97,124,1) 95%);
+    background: radial-gradient(circle, rgba(98,122,252,0.8295693277310925) 16%, rgba(94,87,241,1) 31%, rgba(162,91,195,1) 36%, rgba(224,94,149,1) 52%, rgba(234,107,191,1) 62%, rgba(228,105,232,1) 67%, rgba(184,103,230,1) 82%, rgba(153,101,228,1) 88%, rgba(230,97,124,1) 98%);
+    
+    font-family: 'Lato', sans-serif;
 }

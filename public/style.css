@@ -10,39 +10,21 @@ html {
   font-size: 62.5%; }
 
 body {
-  background: radial-gradient(circle, rgba(98, 122, 252, 0.829569) 16%, #5e57f1 31%, #a25bc3 36%, #e05e95 52%, #ea6bbf 62%, #e469e8 67%, #b867e6 82%, #9965e4 88%, #e6617c 98%);
+  background: radial-gradient(circle, rgba(98, 122, 252, 0.829569) 30%, #9965e4 62%, #e6617c 95%);
   font-family: 'Lato', sans-serif; }
 
 .header {
   width: 90vw;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: #eee;
-  margin: 5rem auto;
-  height: 20vh; }
-  .header__logo {
-    display: block;
-    z-index: 3;
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-    border: 2px solid #9965e4;
-    background: radial-gradient(circle, rgba(98, 122, 252, 0.829569) 30%, #9965e4 62%, #e6617c 95%); }
+  display: flex; }
   .header__logo-text {
     display: block;
-    font-size: 8rem;
-    font-weight: 300;
-    letter-spacing: 1.6;
-    font-family: 'Lato', sans-serif;
-    color: #A9A9A9; }
+    width: 3rem;
+    height: 3rem;
+    z-index: 2;
+    fill: black; }
 
 .search-bar {
-  justify-self: flex-end;
-  align-self: center;
-  width: 25vw;
-  padding: 2rem 4rem;
-  border-radius: 40%; }
+  justify-self: flex-end; }
 
 .albums {
   display: grid;
@@ -56,7 +38,7 @@ body {
   text-align: center; }
 
 .album {
-  margin: 5rem 2rem;
+  margin: 5.1rem 3rem;
   border: 1px solid #555;
   width: 55rem;
   text-align: center;
@@ -107,16 +89,3 @@ body {
     padding: .5rem 1.5rem;
     font-weight: 600;
     display: block; }
-
-.footer {
-  width: 100%;
-  height: 25vh;
-  color: #fff;
-  background-color: #000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  margin-top: 5rem;
-  font-family: 'Lato', sans-serif; }

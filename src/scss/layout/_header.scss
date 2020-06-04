@@ -1,0 +1,40 @@
+.header{
+
+    width: 90vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $color-almost-white;
+    margin: 5rem auto;
+    height: 20vh;
+    
+    &__logo{
+        display: block;
+        z-index: 3;
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        border: 2px solid rgba(153,101,228,1);
+        background: radial-gradient(circle, rgba(98,122,252,0.8295693277310925) 30%, rgba(153,101,228,1) 62%, rgba(230,97,124,1) 95%);
+   
+    }
+
+
+    &__logo-text{
+        display: block;
+        font-size: 8rem;
+        font-weight: 300;
+        letter-spacing: 1.6;
+        font-family: 'Lato', sans-serif; 
+        color: $color-grey-dark;
+      
+    }
+}
+
+.search-bar{
+    justify-self: flex-end;
+    align-self: center;
+    width: 25vw;
+    padding: 2rem 4rem;
+    border-radius: 40%;
+}
