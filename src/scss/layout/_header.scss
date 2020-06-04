@@ -7,16 +7,22 @@
     background-color: $color-almost-white;
     margin: 5rem auto;
     height: 20vh;
-    
+    box-shadow: $shadow-minimal;
     &__logo{
         display: block;
-        z-index: 3;
+        z-index: 1;
         width: 10rem;
         height: 10rem;
+        margin-left: 3rem;
+        margin-top: -1.5rem;
         border-radius: 50%;
-        border: 2px solid rgba(153,101,228,1);
+        border: 1px solid $color-primary;
         background: radial-gradient(circle, rgba(98,122,252,0.8295693277310925) 30%, rgba(153,101,228,1) 62%, rgba(230,97,124,1) 95%);
-   
+        box-shadow: $pink-blur;
+        transition: all .3s;
+        &:hover{
+            transform: rotate(-45deg) scale(1.1);
+        }
     }
 
 
@@ -27,6 +33,7 @@
         letter-spacing: 1.6;
         font-family: 'Lato', sans-serif; 
         color: $color-grey-dark;
+        margin-left: 2rem;
       
     }
 }
@@ -36,5 +43,8 @@
     align-self: center;
     width: 25vw;
     padding: 2rem 4rem;
-    border-radius: 40%;
+    border-radius: 2px;
+    border: 1px solid $color-grey-light;
+    margin-left: auto;
+    margin-right: 3rem;
 }

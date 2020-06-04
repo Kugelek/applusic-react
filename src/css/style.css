@@ -20,29 +20,40 @@ body {
   align-items: center;
   background-color: #eee;
   margin: 5rem auto;
-  height: 20vh; }
+  height: 20vh;
+  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3); }
   .header__logo {
     display: block;
-    z-index: 3;
+    z-index: 1;
     width: 10rem;
     height: 10rem;
+    margin-left: 3rem;
+    margin-top: -1.5rem;
     border-radius: 50%;
-    border: 2px solid #9965e4;
-    background: radial-gradient(circle, rgba(98, 122, 252, 0.829569) 30%, #9965e4 62%, #e6617c 95%); }
+    border: 1px solid #9965e4;
+    background: radial-gradient(circle, rgba(98, 122, 252, 0.829569) 30%, #9965e4 62%, #e6617c 95%);
+    box-shadow: 0px 0px 20px 1px rgba(230, 97, 124, 0.4);
+    transition: all .3s; }
+    .header__logo:hover {
+      transform: rotate(-45deg) scale(1.1); }
   .header__logo-text {
     display: block;
     font-size: 8rem;
     font-weight: 300;
     letter-spacing: 1.6;
     font-family: 'Lato', sans-serif;
-    color: #A9A9A9; }
+    color: #A9A9A9;
+    margin-left: 2rem; }
 
 .search-bar {
   justify-self: flex-end;
   align-self: center;
   width: 25vw;
   padding: 2rem 4rem;
-  border-radius: 40%; }
+  border-radius: 2px;
+  border: 1px solid #C0C0C0;
+  margin-left: auto;
+  margin-right: 3rem; }
 
 .albums {
   display: grid;
@@ -53,11 +64,13 @@ body {
   background-color: #eee;
   justify-content: center;
   align-items: start;
-  text-align: center; }
+  text-align: center;
+  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.5); }
 
 .album {
-  margin: 5rem 2rem;
-  border: 1px solid #555;
+  margin: 5rem 1rem;
+  border: 1px solid #C0C0C0;
+  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
   width: 55rem;
   text-align: center;
   background-color: white;
@@ -66,13 +79,14 @@ body {
   flex-direction: column;
   transition: all 0.6s ease-in-out; }
   .album:hover {
-    height: 30rem;
+    height: 27rem;
     margin-bottom: 1rem;
     padding-bottom: 0; }
   .album:hover .album__extended-info {
-    height: 7rem; }
+    height: 6rem; }
   .album:hover .album__extended-info > * {
-    display: block; }
+    display: block;
+    opacity: 1; }
   .album:hover .album__extended-info::before {
     transform: rotate(45deg); }
   .album__basic-info {
@@ -81,20 +95,25 @@ body {
     position: relative;
     height: 2rem;
     background-color: #fff;
-    transition: all 0.65s ease-in-out;
+    transition: all 0.6s ease-in-out;
     overflow: hidden; }
     .album__extended-info > * {
-      display: none; }
+      transition: all 0.6s ease-in-out;
+      display: none;
+      opacity: 0; }
     .album__extended-info::before {
+      transition: all 0.35s ease-in-out;
       position: absolute;
+      z-index: 2;
       content: '';
-      border: solid black;
-      border-width: 0 3px 3px 0;
+      left: 50rem;
+      border: solid #C0C0C0;
+      border-width: 0 6px 6px 0;
       display: block;
       padding: 4px;
       transform: rotate(-45deg); }
   .album figure {
-    padding: 1rem; }
+    padding: 2.5rem; }
   .album__description {
     margin: auto;
     align-self: center;
@@ -103,10 +122,46 @@ body {
     justify-self: stretch; }
   .album__name {
     font-size: 2.2rem;
+    margin-bottom: 1.5rem;
     text-transform: uppercase;
     padding: .5rem 1.5rem;
     font-weight: 600;
-    display: block; }
+    display: block;
+    color: #000; }
+  .album__artist {
+    font-size: 1.8rem;
+    color: #696969;
+    margin-bottom: .5rem; }
+  .album__release-date {
+    font-size: 1.5rem;
+    color: #696969;
+    margin-bottom: 1.5rem; }
+  .album__link--song:link, .album__link--song:visited, .album__link--genre:link, .album__link--genre:visited {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #e6617c;
+    font-weight: 600;
+    transition: all .2s; }
+    .album__link--song:link:hover, .album__link--song:visited:hover, .album__link--genre:link:hover, .album__link--genre:visited:hover {
+      text-shadow: 0px 0px 20px 1px rgba(230, 97, 124, 0.4);
+      transform: scale(1.05); }
+  .album__cta-btn {
+    border-radius: 3px;
+    border: 3px solid #e6617c;
+    opacity: 0.85;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    transition: all .3s; }
+    .album__cta-btn > a:link,
+    .album__cta-btn > a:visited {
+      text-decoration: none; }
+    .album__cta-btn:hover {
+      opacity: 1;
+      transform: scale(1.05); }
+  .album__count, .album__price {
+    color: #e6617c;
+    font-weight: 600;
+    font-size: 1.6rem; }
 
 .footer {
   width: 100%;
@@ -120,3 +175,6 @@ body {
   margin: auto;
   margin-top: 5rem;
   font-family: 'Lato', sans-serif; }
+  .footer > * {
+    font-size: 1.6rem;
+    text-decoration: none; }

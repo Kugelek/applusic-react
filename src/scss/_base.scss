@@ -1,4 +1,7 @@
 //colors
+
+    $color-primary: rgba(153,101,228,1);
+    $color-secondary: rgba(230,97,124,1);
     $color-white: #fff;
     $color-almost-white: #eee;
     $color-black: #000;
@@ -10,7 +13,9 @@
 
 
 //shadows
-
+$shadow-subtle:  0px 0px 20px 1px rgba(0,0,0,0.5);
+$shadow-minimal:  0px 0px 20px 1px rgba(0,0,0,0.3);
+$pink-blur:  0px 0px 20px 1px rgba(230,97,124,0.4);
 
 *,
 *::before,

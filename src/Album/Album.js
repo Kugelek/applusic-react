@@ -17,24 +17,22 @@ const album = (props) => {
                     <div className="album__release-date">
                         Release date: {props.releaseDate}
                     </div>
-                    <div className="album__count">
-                        Only {props.count} left
-                    </div>
-                    <div className="album__price">
-                        Buy now for {props.price}
-                    </div>
+                    <button className="album__cta-btn">
+                        <a href="#">
+                            <div className="album__count">
+                                Only {props.count} left
+                            </div>
+                            <div className="album__price">
+                                Buy now for {props.price}
+                            </div>
+                        </a>
+                    </button>
                     <div className="album__rights">
                         {props.rights}
                     </div>
-
-
-
                 </div>
             </div>
             <div class="album__extended-info">
-                <div className="album__title">
-                    {props.title}
-                </div>
                 <a className="album__link--song" href={props.linkSong}>Listen to {props.name} at AppleMusic</a>
                 <a className="album__link--genre" href={props.linkGenre}>Check out more in this genre!</a>
             </div>

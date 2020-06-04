@@ -10,4 +10,9 @@
     margin: auto;
     margin-top: 5rem;
     font-family: 'Lato', sans-serif;
+
+    &>*{
+        font-size: 1.6rem;
+        text-decoration: none;
+    }
 }
