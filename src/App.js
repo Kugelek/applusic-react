@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './css/style.css';
 import Album from './Album/Album';
+import Header from './Header/Header';
+import Footer from './Footer/Footer';
 import axios from 'axios';
 
 
@@ -21,25 +23,28 @@ const App = (props) => {
 
 
   return (
-    <section className="App albums">
-      {
-        data.entry.map((album, index) => {
-          return <Album
-            name={album['im:name'].label}
-            image={album['im:image'][2].label}
-            count={album['im:itemCount'].label}
-            price={album['im:price'].label}
-            contentType={album['im:contentType']['im:contentType'].attributes.label}
-            title={album.title.label}
-            linkSong={album.link.attributes.href}
-            artist={album['im:artist'].label}
-            linkGenre={album.category.attributes.scheme}
-            releaseDate={album['im:releaseDate'].attributes.label}
-          />
-        })
-      }
-
-    </section >
+    <React.Fragment>
+      <Header />
+      <section className="App albums">
+        {
+          data.entry.map((album, index) => {
+            return <Album
+              name={album['im:name'].label}
+              image={album['im:image'][2].label}
+              count={album['im:itemCount'].label}
+              price={album['im:price'].label}
+              contentType={album['im:contentType']['im:contentType'].attributes.label}
+              title={album.title.label}
+              linkSong={album.link.attributes.href}
+              artist={album['im:artist'].label}
+              linkGenre={album.category.attributes.scheme}
+              releaseDate={album['im:releaseDate'].attributes.label}
+            />
+          })
+        }
+      </section >
+      <Footer />
+    </React.Fragment>
   );
 
 }
